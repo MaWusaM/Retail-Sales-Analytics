@@ -4,7 +4,7 @@ An end-to-end data analytics project that analyzes retail sales performance usin
 
 
 <p align="center">
-  <img src="images/executive_overview.png" alt="Sales Analysis Dashboard" width="900">
+  <img src="images/executive_overview.JPG" alt="Sales Analysis Dashboard" width="900">
 </p>
 
 <p align="center">
@@ -155,7 +155,7 @@ The final dashboard consists of four interactive reporting pages designed for bu
 
 ## Executive Overview
 
-![Executive Overview](images/executive_overview.png)
+![Executive Overview](images/executive_overview.JPG)
 
 Provides high-level KPIs including Total Sales, Total Profit, Profit Margin, Average Discount, and monthly sales trends to support executive decision-making.
 
@@ -163,7 +163,7 @@ Provides high-level KPIs including Total Sales, Total Profit, Profit Margin, Ave
 
 ## Product Performance
 
-![Product Performance](images/product_performance.png)
+![Product Performance](images/product_performance.JPG)
 
 Evaluates product categories and sub-categories based on sales and profitability while illustrating how increasing discounts affect profit margins.
 
@@ -171,7 +171,7 @@ Evaluates product categories and sub-categories based on sales and profitability
 
 ## Regional Performance
 
-![Regional Performance](images/regional_performance.png)
+![Regional Performance](images/regional_performance.JPG)
 
 Compares sales performance across regions and identifies the highest-performing states, helping management prioritize investment and operational focus.
 
@@ -179,7 +179,7 @@ Compares sales performance across regions and identifies the highest-performing 
 
 ## Insights & Recommendations
 
-![Insights and Recommendations](images/insights_recommendations.png)
+![Insights and Recommendations](images/insights_recommendations.JPG)
 
 Summarizes the analytical findings and provides actionable recommendations to improve profitability, optimize discount strategies, and strengthen regional performance.
 
