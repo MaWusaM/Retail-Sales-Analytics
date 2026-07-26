@@ -224,10 +224,10 @@ retail-sales-analytics-dashboard/
 │   └── cleaned_sales_data.csv
 │
 ├── notebooks/
-│   └── retail_sales_analysis.ipynb
+│   └── retail_sales_analysis_main.ipynb
 │
 ├── dashboard/
-│   └── retail_sales_dashboard.pbix
+│   └── Business_performance_DsB.pbix
 │
 ├── images/
 │   ├── executive_overview.png
