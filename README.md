@@ -1,7 +1,10 @@
-# 📊 Sales Analysis with Python, SQL & Data Visualization
+# Retail Sales Analytics & Business Intelligence Dashboard
+
+An end-to-end data analytics project that analyzes retail sales performance using **SQL, Python, and Power BI**. The objective is to transform transactional sales data into actionable business insights that support strategic decision-making, identify profit drivers, and highlight opportunities for operational improvement.
+
 
 <p align="center">
-  <img src="images/dashboard_preview.png" alt="Sales Analysis Dashboard" width="900">
+  <img src="images/executive_overview.png" alt="Sales Analysis Dashboard" width="900">
 </p>
 
 <p align="center">
@@ -16,436 +19,275 @@
 
 </p>
 
----
-
-# 📖 Project Overview
-
-This project demonstrates an **end-to-end sales data analysis workflow** using **Python**, **Pandas**, **SQLite**, **SQL**, **Matplotlib**, and **Seaborn**.
-
-The notebook follows a real-world Data Analytics pipeline—from importing raw sales data to cleaning, SQL querying, KPI generation, and visual storytelling through charts.
-
-The goal is to transform transactional sales records into actionable business insights that support data-driven decision-making.
 
 ---
 
-# ✨ Project Highlights
+## Project Overview
 
-- 📥 Import raw sales data
-- 🧹 Clean and preprocess the dataset
-- 📅 Convert and analyze date fields
-- 🗃 Store data in SQLite
-- 🧮 Perform SQL-based business analysis
-- 📊 Build insightful visualizations
-- 📈 Generate key business KPIs
-- 💡 Extract actionable business insights
+Retail organizations generate vast amounts of transactional data every day. However, data alone does not create value unless it is transformed into meaningful business insights.
+
+This project demonstrates a complete analytics workflow—from querying and cleaning raw sales data to building an interactive business intelligence dashboard. The analysis focuses on understanding sales performance, profitability, customer purchasing patterns, regional performance, and the impact of discounting on profit.
+
+The final deliverable is a multi-page Power BI dashboard designed to support business stakeholders in making informed, data-driven decisions.
 
 ---
 
-# 📑 Table of Contents
+## Business Problem
 
-- [Project Overview](#-project-overview)
-- [Dataset](#-dataset)
-- [Technologies Used](#-technologies-used)
-- [Project Workflow](#-project-workflow)
-- [Data Cleaning](#-data-cleaning)
-- [SQL Analysis](#-sql-analysis)
-- [Key Performance Indicators](#-key-performance-indicators)
-- [Visualizations](#-visualizations)
-- [Business Insights](#-business-insights)
-- [Project Structure](#-project-structure)
-- [Installation](#-installation)
-- [Future Improvements](#-future-improvements)
-- [Author](#-author)
+Management requires a clear understanding of:
+
+- Which product categories generate the highest revenue and profit.
+- Which regions contribute most to business performance.
+- Whether discounting strategies improve or reduce profitability.
+- Seasonal sales trends throughout the year.
+- Which products and locations require management attention.
+
+Without data-driven insights, strategic decisions regarding pricing, inventory, and regional investment become difficult.
 
 ---
 
-# 📂 Dataset
+## Project Objectives
 
-The project uses a retail sales dataset containing transactional information such as:
+This project aims to:
 
-| Feature | Description |
-|----------|-------------|
-| Order ID | Unique order identifier |
-| Order Date | Date of purchase |
-| Ship Date | Shipping date |
-| Customer Name | Customer information |
-| Segment | Customer segment |
-| Product Name | Purchased product |
-| Category | Product category |
-| Sub-Category | Product subcategory |
-| Region | Sales region |
-| Sales | Revenue generated |
-| Quantity | Units sold |
-| Discount | Discount applied |
-| Profit | Profit earned |
+- Analyze historical retail sales performance.
+- Identify key drivers of revenue and profitability.
+- Evaluate the relationship between discounting and profit.
+- Compare regional and product category performance.
+- Build an interactive dashboard for executive decision-making.
+- Provide actionable business recommendations based on the findings.
 
 ---
 
-# 🛠 Technologies Used
+## Dataset
 
-| Technology | Purpose |
-|------------|---------|
-| Python | Programming Language |
-| Pandas | Data Cleaning & Analysis |
-| NumPy | Numerical Computing |
-| SQLite | SQL Database |
-| SQL | Business Queries |
-| Matplotlib | Data Visualization |
-| Seaborn | Statistical Visualization |
-| Jupyter Notebook | Development Environment |
+The project uses the **Sample Superstore** dataset, a widely used retail dataset containing transactional sales records.
+
+The dataset includes information on:
+
+- Orders
+- Sales
+- Profit
+- Discounts
+- Products
+- Categories
+- Customers
+- States
+- Regions
+- Order Dates
 
 ---
 
-# 🔄 Project Workflow
+## Tools & Technologies
 
-```text
-                    Raw Sales CSV
-                          │
-                          ▼
-                Data Inspection & EDA
-                          │
-                          ▼
-                   Data Cleaning
-                          │
-                          ▼
-               Feature Engineering
-                          │
-                          ▼
-              Export Clean Dataset
-                          │
-                          ▼
-              SQLite Database Setup
-                          │
-                          ▼
-                 SQL Business Queries
-                          │
-                          ▼
-              KPI & Trend Analysis
-                          │
-                          ▼
-                 Data Visualization
-                          │
-                          ▼
-                 Business Insights
+| Tool | Purpose |
+|------|---------|
+| SQL | Data exploration and business queries |
+| Python | Data cleaning and exploratory data analysis |
+| Pandas | Data manipulation |
+| Matplotlib | Data visualization |
+| SQLite | Database management |
+| Power BI | Interactive dashboard development |
+
+---
+
+# Project Workflow
+
+```
+Raw Sales Data
+        │
+        ▼
+SQL Data Exploration
+        │
+        ▼
+Python Data Cleaning
+        │
+        ▼
+Exploratory Data Analysis
+        │
+        ▼
+Business Insights
+        │
+        ▼
+Power BI Dashboard
+        │
+        ▼
+Recommendations
 ```
 
 ---
 
-# 🧹 Data Cleaning
+# SQL Analysis
 
-The notebook includes several preprocessing steps to improve data quality.
+SQL was used to answer key business questions, including:
 
-### ✔ Column Standardization
+- Total sales generated
+- Total profit
+- Monthly sales performance
+- Sales by region
+- Profit by category
+- Top-performing states
+- Customer sales rankings
+- Discount impact on profitability
 
-- Converted column names to lowercase
-- Replaced spaces with underscores
-- Improved naming consistency
+These queries formed the analytical foundation for subsequent visualizations and dashboard development.
 
-Example:
+---
 
-```python
-df.columns = (
-    df.columns
-      .str.lower()
-      .str.replace(" ", "_")
-)
+# Python Analysis
+
+Python was used to:
+
+- Clean and prepare the dataset
+- Handle missing values
+- Perform exploratory data analysis
+- Aggregate sales metrics
+- Generate supporting visualizations
+- Export cleaned data for Power BI
+
+---
+
+# Power BI Dashboard
+
+The final dashboard consists of four interactive reporting pages designed for business stakeholders.
+
+---
+
+## Executive Overview
+
+![Executive Overview](images/executive_overview.png)
+
+Provides high-level KPIs including Total Sales, Total Profit, Profit Margin, Average Discount, and monthly sales trends to support executive decision-making.
+
+---
+
+## Product Performance
+
+![Product Performance](images/product_performance.png)
+
+Evaluates product categories and sub-categories based on sales and profitability while illustrating how increasing discounts affect profit margins.
+
+---
+
+## Regional Performance
+
+![Regional Performance](images/regional_performance.png)
+
+Compares sales performance across regions and identifies the highest-performing states, helping management prioritize investment and operational focus.
+
+---
+
+## Insights & Recommendations
+
+![Insights and Recommendations](images/insights_recommendations.png)
+
+Summarizes the analytical findings and provides actionable recommendations to improve profitability, optimize discount strategies, and strengthen regional performance.
+
+---
+
+# Key Business Insights
+
+The analysis revealed several important findings:
+
+- Total sales exceeded **$2 million**, generating approximately **$286,000** in profit.
+- Overall profit margin was approximately **12%**, indicating relatively thin profitability.
+- Technology was the highest-performing product category in both sales and profit.
+- Furniture generated strong revenue but significantly lower profitability.
+- The **Tables** sub-category recorded negative profit, reducing overall business performance.
+- Profit declined substantially when discounts exceeded approximately **15–20%**, suggesting aggressive discounting erodes profitability.
+- The **West** and **East** regions achieved the strongest profit margins.
+- Sales demonstrated seasonal patterns, with the highest monthly performance occurring during the fourth quarter.
+
+---
+
+# Business Recommendations
+
+Based on the analysis, the following actions are recommended:
+
+1. Review pricing and cost structures within the Furniture category, particularly the Tables sub-category.
+2. Establish discount guidelines to minimize profit erosion while maintaining competitive pricing.
+3. Increase investment in high-performing Technology products.
+4. Prioritize expansion strategies in the West and East regions.
+5. Prepare inventory and staffing for increased fourth-quarter demand.
+6. Conduct further analysis of customer purchasing behavior to improve targeted marketing efforts.
+
+---
+
+# Repository Structure
+
 ```
-
----
-
-### ✔ Date Conversion
-
-Converted date columns into datetime format for:
-
-- Monthly analysis
-- Time-series trends
-- Date filtering
-
----
-
-### ✔ Data Validation
-
-Performed checks for:
-
-- Missing values
-- Data types
-- Dataset dimensions
-- Duplicate records
-- Summary statistics
-
----
-
-### ✔ Export Clean Dataset
-
-The cleaned dataset is exported for future analysis.
-
----
-
-# 🗄 SQL Analysis
-
-After cleaning, the dataset is loaded into a SQLite database, allowing SQL queries to answer common business questions.
-
-The notebook performs analyses including:
-
-- Total Sales
-- Total Profit
-- Sales by Region
-- Sales by Category
-- Monthly Sales Trends
-- Top Customers
-- Discount Impact on Profit
-
-Example SQL query:
-
-```sql
-SELECT
-    region,
-    SUM(sales) AS total_sales
-FROM sales
-GROUP BY region
-ORDER BY total_sales DESC;
-```
-
----
-
-# 📊 Key Performance Indicators
-
-The notebook calculates important business metrics including:
-
-- 💰 Total Sales
-- 📈 Total Profit
-- 📦 Total Orders
-- 🛒 Average Discount
-- 👥 Top Customers
-- 🌍 Best Performing Region
-- 📅 Monthly Sales Trends
-
-These KPIs provide a quick overview of business performance.
-
----
-
-# 📈 Visualizations
-
-## 🌍 Regional Sales Performance
-
-<p align="center">
-<img src="images/regional_sales.png" width="850">
-</p>
-
-Compares revenue generated across different sales regions.
-
----
-
-## 📦 Category Performance
-
-<p align="center">
-<img src="images/category_performance.png" width="850">
-</p>
-
-Highlights sales and profitability by product category.
-
----
-
-## 👥 Top Customers
-
-<p align="center">
-<img src="images/top_customers.png" width="850">
-</p>
-
-Displays the highest revenue-generating customers.
-
----
-
-## 📅 Monthly Sales Trend
-
-<p align="center">
-<img src="images/monthly_sales.png" width="850">
-</p>
-
-Illustrates how sales evolve over time.
-
----
-
-## 💰 Discount vs Profit
-
-<p align="center">
-<img src="images/discount_profit.png" width="850">
-</p>
-
-Shows the relationship between discounts and profitability.
-
----
-
-# 💡 Business Insights
-
-The analysis helps answer several important business questions:
-
-- Which region generates the highest sales?
-- Which product category contributes the most revenue?
-- Which customers generate the most income?
-- How do sales fluctuate throughout the year?
-- What effect do discounts have on profitability?
-- Which areas present opportunities for business improvement?
-
----
-
-# 🎯 Skills Demonstrated
-
-This project showcases practical skills in:
-
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
-- SQL Querying
-- SQLite Database Management
-- Business Analytics
-- KPI Reporting
-- Time-Series Analysis
-- Data Visualization
-- Python Programming
-- Storytelling with Data
-
----
-
-# 📁 Project Structure
-
-```text
-sales-analysis/
+retail-sales-analytics-dashboard/
 
 │
 ├── data/
-│   ├── superstore_sales.csv
-│   └── clean_superstore_sales.csv
+│   ├── raw_sales_data.csv
+│   └── cleaned_sales_data.csv
 │
 ├── notebooks/
-│   └── sales_analysis_main.ipynb
+│   └── retail_sales_analysis.ipynb
+│
+├── dashboard/
+│   └── retail_sales_dashboard.pbix
 │
 ├── images/
-│   ├── dashboard_preview.png
-│   ├── regional_sales.png
-│   ├── category_performance.png
-│   ├── top_customers.png
-│   ├── monthly_sales.png
-│   └── discount_profit.png
+│   ├── executive_overview.png
+│   ├── product_performance.png
+│   ├── regional_performance.png
+│   └── insights_recommendations.png
 │
-├── README.md
-├── requirements.txt
-└── LICENSE
+└── README.md
 ```
 
 ---
 
-# ⚙ Installation
+# Skills Demonstrated
 
-Clone the repository:
+This project demonstrates practical experience in:
 
-```bash
-git clone https://github.com/<your-github-username>/sales-analysis.git
-```
-
-Move into the project directory:
-
-```bash
-cd sales-analysis
-```
-
-Install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-Launch Jupyter Notebook:
-
-```bash
-jupyter notebook
-```
-
-Open:
-
-```text
-notebooks/sales_analysis_main.ipynb
-```
+- SQL querying
+- Data cleaning
+- Exploratory Data Analysis (EDA)
+- Business Intelligence
+- KPI development
+- Dashboard design
+- Data visualization
+- Business storytelling
+- Decision support analytics
+- Power BI
+- Python (Pandas & Matplotlib)
 
 ---
 
-# 📦 Requirements
+# Limitations
 
-```
-pandas
-numpy
-matplotlib
-seaborn
-sqlite3
-jupyter
-```
+The analysis is subject to several limitations:
+
+- The dataset represents historical transactional data and does not include customer demographics or marketing information.
+- External factors such as inflation, competition, and supply chain disruptions were not considered.
+- The dashboard focuses on descriptive analytics rather than predictive modeling.
 
 ---
 
-# 🚀 Future Improvements
+# Future Enhancements
 
-Possible enhancements include:
+Future versions of this project may include:
 
-- Interactive Plotly dashboards
-- Streamlit web application
-- Power BI dashboard
-- Tableau dashboard
-- Sales forecasting using Machine Learning
-- Customer segmentation
-- Profit prediction
-- Geographic sales mapping
-- Automated reporting
+- Customer segmentation using RFM analysis.
+- Sales forecasting using time-series models.
+- Predictive profit modeling with machine learning.
+- Interactive drill-through functionality in Power BI.
+- Additional DAX measures and advanced KPI tracking.
+- Integration with cloud-based data sources.
 
 ---
 
-# 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository.
-2. Create a feature branch.
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit your changes.
-
-```bash
-git commit -m "Add new feature"
-```
-
-4. Push your branch.
-
-```bash
-git push origin feature-name
-```
-
-5. Open a Pull Request.
-
----
-
-# 📜 License
-
-This project is licensed under the **MIT License**.
-
-Feel free to use, modify, and share this project for educational and professional purposes.
-
----
-
-# ⭐ Support
-
-If you found this project useful or learned something from it, please consider giving the repository a **⭐ Star**.
-
-It helps others discover the project and supports future open-source work.
-
-<p align="center">
-
-### Thank you for visiting this project! 🚀
-
-</p>
+Data Analyst | Python | SQL | Power BI
 
 **Mubarik Wusa Manga**
 
+I enjoy transforming raw data into actionable insights that support business decision-making.
+
+Feel free to connect with me on LinkedIn or explore my other projects on GitHub.
 GitHub: https://github.com/MaWusaM
 
 LinkedIn: https://linkedin.com/in/Mubarik-Wusa-Manga-5439911b4 
